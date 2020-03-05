@@ -2,7 +2,7 @@
 
 What is this
 
-This ` python ` srcipt is a small test tool to explore how BTS7960 or similar PWM controler works if connected with Raspberry Pi via GPIO ports.
+This ` python ` srcipt is a small test tool to explore how BTS7960 or similar PWM controller works if connected with Raspberry Pi via GPIO ports.
 
 The goal of this project is to play with the PWM as simply as possible using just a terminal. You can use it just to test with an engine but you can use it with oscilloscope as well to discover how duty-cycles in real life work. It's only up to you.
 
@@ -12,11 +12,11 @@ The goal of this project is to play with the PWM as simply as possible using jus
 
 2. Get ` python3-rpi.gpio ` if you don't already have it.
 
-3. Wire your PWM controler according to its documentation. You can use ` BTS7960_PIN_L_EN `, ` BTS7960_PIN_LPWM `, ` BTS7960_PIN_R_EN ` and ` BTS7960_PIN_RPWM ` constants as the pins enable 1st direction, control 1st direction, enable 2nd direction and control 2nd direction respectively. Note we're using direction LEFT and RIGHT since we're controling a small vehicle but clokwise, negative-clockwise or any other direction names could be also used.
+3. Wire your PWM controller according to its documentation. You can use ` BTS7960_PIN_L_EN `, ` BTS7960_PIN_LPWM `, ` BTS7960_PIN_R_EN ` and ` BTS7960_PIN_RPWM ` constants as the pins enable 1st direction, controll 1st direction, enable 2nd direction and controll 2nd direction respectively. Note we're using direction LEFT and RIGHT since we're controlling a small vehicle but clokwise, negative-clockwise or any other direction names could be also used.
 
 ## Usage
 
-Just run the script without any command-line argument and use commands to drive your PWM controler.
+Just run the script without any command-line argument and use commands to drive your PWM controller.
 
 Please ceep in mind this is a test tool only. Command input processing doesn't have input error checks.
 
@@ -30,7 +30,7 @@ Please ceep in mind this is a test tool only. Command input processing doesn't h
 
 - ` f ` Speeds up the PWM in steps 25-50-75-100 percentage in the 1st direction.
 
-- ` i ` Initializes controler instance again.
+- ` i ` Initializes controller instance again.
 
 - ` n ` Sets the PWM to neutral.
 
@@ -40,9 +40,9 @@ Please ceep in mind this is a test tool only. Command input processing doesn't h
 
 ## Fine tuning
 
-You can set some variables to personalyse the control flow oy the PWM test.
+You can set some variables to personalyse the controll flow oy the PWM test.
 
-- ` FREQUENCY ` Frequency in Hz for both controller directions. One side of setting the frequency are the customization needs of your script and the other side is the frequency of the PWM controler. It's a good practice to use an oscilloscope if you want to really fine tune this value.
+- ` FREQUENCY ` Frequency in Hz for both controller directions. One side of setting the frequency are the customization needs of your script and the other side is the frequency of the PWM controller. It's a good practice to use an oscilloscope if you want to really fine tune this value.
 
 - ` GPIO_PINS ` List of GPIO pins in board style. This constant is used only by ` setuppins() ` function. Both the constant and function are rarely used in real world if you don't understand the reason of it it's definitely a good practice if you don't use them at all.
 
