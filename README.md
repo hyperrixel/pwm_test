@@ -1,6 +1,6 @@
 # Command line test tool for BTS7960 pwm connected via RPi GPIO
 
-What is this
+## What is this
 
 This ` python ` srcipt is a small test tool to explore how BTS7960 or similar PWM controller works if connected with Raspberry Pi via GPIO ports.
 
